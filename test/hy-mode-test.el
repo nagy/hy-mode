@@ -329,7 +329,7 @@ c]+-])" :indented))
     (expect "«t:ValueError» ValueErrorx xValueError" :faces))
 
   (it "to special forms"
-    (expect "«k:->» «k:for» forx xfor for.x x.for" :faces))
+    (expect "«k:->» «k:for» «k:let» forx xfor for.x x.for" :faces))
 
   (it "to class definitions"
     (expect "«k:defclass» «t:Klass» [parent]" :faces))
