@@ -362,6 +362,7 @@
     `(: "("
         symbol-start
         (group-n 1 (or ,@hy-font-lock--definitions))
+        (? (: (1+ space) "[" (1+ word) "]"))
         (1+ space)
         (group-n 2 (1+ word))))
 

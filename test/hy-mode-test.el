@@ -322,6 +322,9 @@ c]+-])" :indented))
   (xit "to function defs"
     (expect "«k:defn» «f:func» defnx func xdefn func" :faces))
 
+  (xit "to decorated function defs"
+    (expect "«k:defn» [decoration] «f:func» defnx func xdefn func" :faces))
+
   (it "to exceptions"
     (expect "«t:ValueError» ValueErrorx xValueError" :faces))
 
