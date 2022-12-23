@@ -29,6 +29,7 @@
 ;;; Code:
 
 (require 'hy-base)
+(require 'python)
 
 (defvar hy-font-lock-highlight-percent-args? t
   "Whether to highlight '%i' symbols in Hy's clojure-like syntax for lambdas.")
@@ -363,6 +364,7 @@
         symbol-start
         (group-n 1 (or ,@hy-font-lock--definitions))
         (1+ space)
+        (? "[" (* word) "]" (1+ space))
         (group-n 2 (1+ word))))
 
    '(1 font-lock-keyword-face)
@@ -395,6 +397,7 @@
   (list
    (rx (group-n 1 "defclass")
        (1+ space)
+       (? "[" (* word) "]" (1+ space))
        (group-n 2 (1+ word)))
 
    '(1 font-lock-keyword-face)
